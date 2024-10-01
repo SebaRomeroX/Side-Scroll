@@ -1,0 +1,84 @@
+*{                   /* --------- Reset -------- */
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(0, 0, 4);
+    color: aliceblue;
+}
+
+h1{
+    height: 4vh;
+    padding-left: 1em;
+    font-family: 'Georgia', serif;
+}
+
+section{   /*   Organizado para scroll lateral    */
+    display: block;
+    padding: 19vh 0 1vh 0;
+    height: 47vh;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    scroll-behavior: smooth;
+}
+
+figure{
+    display: inline-block;
+    width: 22vw; 
+    height: 27vh;
+    margin-right: 10px;
+
+    transform: rotate(2deg);    /*  Animacion para mostrar */
+    transition: 0.5s ease; 
+}
+
+figure:hover{
+    transform: rotate(-12deg);
+    translate: -100px -100px;
+}
+
+figure:hover + figure{  /* Animacion del contiguo */
+    translate: 4vw 0;
+}
+
+img{        /*  Estilos de imagenes   */
+    width: 60vw;  /* Mayor tamaño desborda */
+    height: 100%;
+
+    border-radius: 1em;
+    object-fit: cover; 
+}
+
+section::-webkit-scrollbar { /* scrollbar oculto */
+    display: none;
+}
+
+
+
+
+    /* ------- Pantalla intermedia -------- */
+@media all and (min-width:480px){
+    img{        
+        width: 50vw; 
+    }
+}
+
+
+
+    /* ------- Pantalla grande -------- */
+
+@media all and (min-width:804px){
+    figure{
+        width: 12vw; 
+        margin-right: 10px;
+    }
+
+    img{        
+        width: 30vw; 
+    }
+}
