@@ -31,18 +31,15 @@ figure{
     display: inline-block;
     width: 22vw; 
     height: 27vh;
-    margin-right: 10px;
-
-    transform: rotate(2deg);    /*  Animacion para mostrar */
-    transition: 0.5s ease; 
+    margin-right: 10px;   
 }
 
-figure:hover{
+figure:hover img{
     transform: rotate(-12deg);
-    translate: -100px -100px;
+    translate: -110px -80px;
 }
 
-figure:hover + figure{  /* Animacion del contiguo */
+figure:hover + figure img{  /* Animacion del contiguo */
     translate: 4vw 0;
 }
 
@@ -52,12 +49,14 @@ img{        /*  Estilos de imagenes   */
 
     border-radius: 1em;
     object-fit: cover; 
+
+    transform: rotate(2deg);    /*  Animacion para mostrar */
+    transition: 0.5s ease; 
 }
 
 section::-webkit-scrollbar { /* scrollbar oculto */
     display: none;
 }
-
 
 
 
@@ -67,7 +66,6 @@ section::-webkit-scrollbar { /* scrollbar oculto */
         width: 50vw; 
     }
 }
-
 
 
     /* ------- Pantalla grande -------- */
